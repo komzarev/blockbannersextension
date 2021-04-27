@@ -1,7 +1,7 @@
 
 function blockPopaps(){
 	
-	console.log("popaps block script run");
+	console.log("popaps block script runs");
 
 	//www.tipranks.com
 	var tipranksHide = ['client-components-stock-research-table-style__tableRestrict client-components-stock-research-insiders-table__tableRestrict restricted'
@@ -36,7 +36,7 @@ function blockPopaps(){
 attrGroup.forEach(function(hide) {
 	hide.forEach(function(banner) {
 		var vv = document.querySelector(banner)
-		if (vv !== undefined){
+		if (vv){
 			vv.style.visibility = "hidden";
 			vv.style.height = "0px"
 		}
@@ -46,7 +46,7 @@ attrGroup.forEach(function(hide) {
 hideGroup.forEach(function(hide) {
 	hide.forEach(function(banner) {
 		var vv = document.getElementsByClassName(banner)
-		if (vv.length > 0){
+		if (vv && vv.length > 0){
 			vv[0].style.visibility = "hidden";
 			vv[0].style.height = "0px"
 		}
@@ -56,7 +56,7 @@ hideGroup.forEach(function(hide) {
 renameGroup.forEach(function(rename) {
 	rename.forEach(function(banner) {
 		var vv = document.getElementsByClassName(banner)
-		if (vv.length > 0){
+		if (vv && vv.length > 0){
 			vv[0].className = "asss";
 		}
 	});	
@@ -65,7 +65,7 @@ renameGroup.forEach(function(rename) {
 cleanHtmlGroup.forEach(function(rename) {
 	rename.forEach(function(banner) {
 		var vv = document.getElementById(banner)
-		if (vv !== undefined){
+		if (vv){
 			vv.outerHTML="";
 		}
 	});	
