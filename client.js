@@ -2,6 +2,7 @@
 function blockPopaps(){
 	
 	console.log("popaps block script runs");
+	for (var i = 0; i < 5000; i++) clearInterval(i);
 
 	//www.tipranks.com
 	var tipranksHide = ['client-components-stock-research-table-style__tableRestrict client-components-stock-research-insiders-table__tableRestrict restricted'
