@@ -2,7 +2,7 @@
 function blockPopaps(){
 	
 	console.log("popaps block script runs");
-	for (var i = 0; i < 5000; i++) clearInterval(i);
+	for (var i = 0; i < 10000; i++) clearInterval(i);
 
 	//www.tipranks.com
 	var tipranksHide = ['client-components-stock-research-table-style__tableRestrict client-components-stock-research-insiders-table__tableRestrict restricted'
@@ -17,8 +17,6 @@ function blockPopaps(){
 	];
 
 	
-	var hideGroup = [tipranksHide,yandexZenHide];
-
 	var tipranksRename = ['client-components-stock-research-insiders-table__isRestricted'
 	,'client-components-stock-research-bloggers-table__isRestricted'
 	,'client-components-stock-research-StockPageBox-style__tableChildren rt-table'
@@ -26,13 +24,16 @@ function blockPopaps(){
 	,"company-report"
 	];
 
-	var renameGroup = [tipranksRename];
+	var simpleWallStreetHide = ["sc-phfh3g-14 jOpUVf"]
 
 	var simpleWallStreetAttr = ["[data-cy-id='modal-ModalPortal-0-']"];
-	var attrGroup = [ simpleWallStreetAttr];
 
 	var simpleWallStreetClearHtml = ["blur-css"];
+
+	var renameGroup = [tipranksRename];
+	var attrGroup = [ simpleWallStreetAttr];
 	var cleanHtmlGroup = [ simpleWallStreetClearHtml];
+	var hideGroup = [tipranksHide,yandexZenHide,simpleWallStreetHide];
 
 attrGroup.forEach(function(hide) {
 	hide.forEach(function(banner) {
